@@ -3950,17 +3950,31 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}/* Zoom effect on hover */
-.image img {
-	transition: transform 0.3s ease;
-  }
-  
-  .image:hover img {
-	transform: scale(1.075);
-  }
-  .image video {
-	width: 125%;
-	height: auto;
-	border-radius: 0.5rem;
-	object-fit: cover;
-	display: block;
+/* Styles for the image container and video */
+.image {
+    display: block;
+    position: relative;
+    width: 100%;  /* Ensures the video takes up full width */
+    cursor: pointer;  /* Make the container clickable */
+    overflow: hidden; /* Ensure no overflow if the video is resized */
 }
+
+.image iframe {
+    width: 100%;      /* Ensure the iframe is fully responsive */
+    height: 315px;    /* Fixed height to maintain aspect ratio */
+    border-radius: 0.5rem; /* Optional: Adds rounded corners */
+    display: block;
+    pointer-events: all;  /* Ensure the iframe is interactive */
+}
+
+/* Hover effect for any images (if any) */
+.image img {
+    transition: transform 0.3s ease;
+}
+
+.image:hover img {
+    transform: scale(1.075);
+}
+
+
+  
