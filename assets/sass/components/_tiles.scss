@@ -48,11 +48,11 @@
 			h3 {
 				font-size: 1.75em;
 
-				a {
-					&:hover {
-						color: inherit !important;
-					}
-				}
+				// a {
+				// 	&:hover {
+				// 		color: inherit !important;
+				// 	}
+				// }
 			}
 
 			.link.primary {
@@ -66,7 +66,7 @@
 			}
 
 			&:before {
-				@include vendor('transition', 'opacity 0.5s ease');
+				@include vendor('transition');
 				bottom: 0;
 				content: '';
 				display: block;
@@ -90,11 +90,11 @@
 				z-index: 1;
 			}
 
-			&:hover {
-				&:before {
-					opacity: 0;
-				}
-			}
+			// &:hover {
+			// 	&:before {
+			// 		opacity: 0;
+			// 	}
+			// }
 
 			&.is-transitioning {
 				@include vendor('transform', 'scale(0.95)');
